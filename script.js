@@ -26,8 +26,8 @@ const scrambledText = characters.join("");
 text.textContent = scrambledText;
 
 window.onload = function() {
-  // This function will be executed when the entire page (including images and other resources) has finished loading
-  console.log("Page fully loaded");
+  document.getElementById('startbutton').innerText = "Click here, there is something for you"
+  document.getElementById('startbutton').disabled = false;
 };
 
 function startAnimation() {
