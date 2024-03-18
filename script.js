@@ -25,9 +25,16 @@ const scrambledText = characters.join("");
 // Set the scrambled text as the text content of the element
 text.textContent = scrambledText;
 
+window.onload = function() {
+  // This function will be executed when the entire page (including images and other resources) has finished loading
+  console.log("Page fully loaded");
+};
+
 function startAnimation() {
   // Get the audio element
   var audio = document.getElementById("myAudio");
+
+  
 
   gsap.to(".container", {
     opacity: 1
