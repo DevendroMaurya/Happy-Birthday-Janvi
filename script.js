@@ -26,8 +26,8 @@ const scrambledText = characters.join("");
 text.textContent = scrambledText;
 
 window.onload = function() {
-  document.getElementById('startbutton').innerText = "Click here, there is something for you"
   document.getElementById('startbutton').disabled = false;
+  document.getElementById('startbutton').innerHTML = "Click here, there is something for you"
 };
 
 function startAnimation() {
