@@ -555,7 +555,7 @@ function startAnimation() {
       "#img11",
       { scale: 2 },
       {
-        scale: 1,
+        scale: 1.1,
         top: "0%",
         duration: 1.6,
         delay: 0.2,
@@ -567,7 +567,7 @@ function startAnimation() {
       { scale: 2 },
       {
         scale: 1,
-        bottom: "0%",
+        bottom: "-48%",
         duration: 1.8,
         ease: "power4.inOut",
       }
@@ -576,7 +576,7 @@ function startAnimation() {
       "#img13",
       { scale: 2 },
       {
-        scale: 1,
+        scale: 1.2,
         top: "0%",
         duration: 1.6,
         delay: 0.2,

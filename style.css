@@ -384,8 +384,9 @@ img {
 #img12 {
   position: absolute;
   position: absolute;
-  bottom: 150%;
+  bottom: 200%;
   left: 0;
+  /* z-index: -9999 !important; */
 }
 
 #img13 {
