@@ -25,25 +25,24 @@ const scrambledText = characters.join("");
 // Set the scrambled text as the text content of the element
 text.textContent = scrambledText;
 
-window.onload = function() {
-  document.getElementById('startbutton').disabled = false;
-  document.getElementById('startbutton').innerHTML = "Click here, there is something for you"
+window.onload = function () {
+  document.getElementById("startbutton").disabled = false;
+  document.getElementById("startbutton").innerHTML =
+    "Click here, there is something for you";
 };
 
 function startAnimation() {
   // Get the audio element
   var audio = document.getElementById("myAudio");
 
-  
-
   gsap.to(".container", {
-    opacity: 1
-  })
+    opacity: 1,
+  });
   gsap.to("#startbutton", {
     opacity: 0,
-  })
+  });
 
-  document.getElementById("startbutton").remove()
+  document.getElementById("startbutton").remove();
 
   // Play the audio
   audio.play();
@@ -292,7 +291,7 @@ function startAnimation() {
       stagger: 0.05,
       duration: 1,
       onComplete: () => {
-        document.getElementById("snowfall").remove()
+        document.getElementById("snowfall").remove();
         setTimeout(() => {
           gsap.to("#leaffall", {
             opacity: 0,
@@ -365,6 +364,40 @@ function startAnimation() {
       delay: -1,
       stagger: 0.05,
       duration: 1,
+      onComplete: () => {
+        gsap.to("#heart-icon", {
+          delay: -2,
+          autoAlpha: 1,
+          onComplete: () => {
+            gsap.to("#heart-icon", {
+              bottom: "100%",
+              duration: 8,
+            });
+            gsap.to("#heart-icon", {
+              left: "40%",
+              duration: 2.5,
+              ease: "power1.inOut",
+              rotation: -25,
+              onComplete: () => {
+                gsap.to("#heart-icon", {
+                  left: "55%",
+                  duration: 2.5,
+                  ease: "power1.inOut",
+                  rotation: 25,
+                  onComplete: () => {
+                    gsap.to("#heart-icon", {
+                      left: "50%",
+                      duration: 2.5,
+                      ease: "power1.inOut",
+                      rotation: -25,
+                    });
+                  },
+                });
+              },
+            });
+          },
+        });
+      },
     })
     .to("#eight #eight-text-1 .char", {
       autoAlpha: 0,
@@ -378,8 +411,8 @@ function startAnimation() {
       delay: -1,
       ease: "none",
       onComplete: () => {
-        document.getElementById("leaffall").remove()
-      }
+        document.getElementById("leaffall").remove();
+      },
     })
     .to(".container", {
       backgroundImage: "linear-gradient(135deg, #FFFFFF 100%, #FFB7CE 100%)",
@@ -500,7 +533,13 @@ function startAnimation() {
     .fromTo(
       "#img9",
       { scale: 2 },
-      { scale: 1, bottom: "0%", duration: 1.65, delay: 0.1, ease: "power4.inOut" }
+      {
+        scale: 1,
+        bottom: "0%",
+        duration: 1.65,
+        delay: 0.1,
+        ease: "power4.inOut",
+      }
     )
     .fromTo(
       "#img10",
